@@ -574,7 +574,7 @@ def training_loop_16_mixed(model, train_loader, val_loader, loss_function, optim
     return model, history, final_cm
 
 
-def plot_training_logs(history1, history2, model_name1="PlainCNN Model", model_name2="SimpleResNet Model"):
+def plot_training_logs(history1, history2, model_name1="Simple ResNet1", model_name2="Simple ResNet2"):
     """
     Plots and compares the training history of two models.
 
@@ -582,9 +582,9 @@ def plot_training_logs(history1, history2, model_name1="PlainCNN Model", model_n
         history1 (dict): The training history dictionary for the first model.
         history2 (dict): The training history dictionary for the second model.
         model_name1 (str, optional): The name of the first model for labels.
-                                     Defaults to "Plain CNN Model".
+                                     Defaults to "Simple ResNet1".
         model_name2 (str, optional): The name of the second model for labels.
-                                     Defaults to "ResNet Model".
+                                     Defaults to "Simple ResNet2".
     """
     # Extract the final validation accuracy for each model from the history.
     final_acc1 = history1['val_accuracy'][-1]
